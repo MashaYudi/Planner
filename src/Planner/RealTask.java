@@ -22,7 +22,7 @@ public class RealTask implements Task{
     @Override
     public void execute(){
         if (!dependencies.isEmpty()) {
-            throw new IllegalStateException("Planner.Task can not be executed before its dependencies");
+            throw new IllegalStateException("Task can not be executed before its dependencies");
         }
         synchronized (lock) {
             System.out.println("Planner.Task was done");
